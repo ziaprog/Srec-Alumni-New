@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.master.cs" Inherits="Site" %>
+
+<%@ Register src="login.ascx" tagname="login" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <link href="menu/menu_style.css" rel="stylesheet" type="text/css" />
+   <script language="JavaScript">
+    function toggle(id) {
+	        var state = document.getElementById(id).style.display;
+            if (state == 'block') {
+	                document.getElementById(id).style.display = 'none';
+            } else {
+	                document.getElementById(id).style.display = 'block';
+	            }
+	        }
+	</script>
+
+
+    <link href="Controls%20css.css" rel="stylesheet" type="text/css" />
+
+
+   
+
+
+   
+
+
+   
+
+
+    <link href="GridView%20Css%20Themes/YahooGridView.css" rel="stylesheet" 
+        type="text/css" />
+
+
+   
+
+
+   
+
+
+   
+
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+      
+<div class="glow">
+<div id="wrap"> 
+<div id="header">
+    
+<div id="login">
+    <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+            Welcome
+            <asp:LoginName ID="LoginName1" runat="server" Font-Bold="True" />
+            &nbsp;<asp:LoginStatus ID="LoginStatus1" runat="server" />
+        </LoggedInTemplate>
+        <AnonymousTemplate>
+           Welcome Guest 
+            <asp:LoginStatus ID="LoginStatus2" runat="server" />
+            &nbsp;<span style="color: #0000ff"><a href="Register.aspx">Register</a></span>&nbsp;
+        </AnonymousTemplate>
+    </asp:LoginView>
+</div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    </div> 
+
+<div id="sidebar"> 
+    <p><ul id="menu">
+    <li><a href="Default.aspx" target="_self">Home</a></li>
+    <li><a href="Update-profile.aspx" target="_self">Update Profile</a></li>
+    <li><a href="Search.aspx" target="_self">Find a SRECian</a></li>
+    <li><a href="NewsandEvents.aspx" target="_self">News & Events</a></li>
+    <li><a href="Messages.aspx" target="_self">My Messages</a></li>
+    <li><a href="Invite.aspx" target="_self">Invite a Friend</a></li>
+    <li><a href="Guestbook.aspx" target="_self">Alumni Memories</a></li>
+    <li><a href="Albums.aspx" target="_self">Photo Gallery</a></li>
+    <li><a href="http://srecalumni.freeforums.org/" target="_blank">Forum</a></li>
+    <li><a href="office-bearers.aspx">Office Bearers</a></li>
+  </ul>
+    
+</p> 
+<p>
+    <asp:LoginView ID="LoginView2" runat="server">
+        <AnonymousTemplate>
+            <uc1:login ID="login1" runat="server" />
+        </AnonymousTemplate>
+    </asp:LoginView>
+    </p>
+</div> 
+<div id="main"> 
+    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+    </asp:ContentPlaceHolder>
+</div> 
+
+<div id="footer"> 
+<p><a href="Default.aspx">Home</a> | <a href="NewsandEvents.aspx">News</a> |
+    <a href="Contact.aspx">Contact</a></p>
+    <p>© All Rights Reserved. Sri Ramakrishna Engineering College</p> 
+</div> 
+</div>
+</div>
+
+    </form>
+ 
+</body>
+</html>

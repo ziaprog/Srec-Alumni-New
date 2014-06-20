@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="">
+        <siteMapNode url="~/NewsandEvents.aspx" title="News and Events"  description="" />
+        <siteMapNode url="~/Messages.aspx" title="My Messages"  description="" />
+        <siteMapNode url="~/Update-profile.aspx" title="Update Profile"  description="" />
+        <siteMapNode url="~/Search.aspx" title="Find SRECian"  description="" />
+        <siteMapNode url="~/Invite.aspx" title="Invite Friends"  description="" />
+        <siteMapNode url="~/Guestbook.aspx" title="Alumni Memories"  description=""/>        
+        
+        <siteMapNode url="~/Viewalbums.aspx" title="Photo Gallery"  description="" />
+     </siteMapNode>
+   
+</siteMap>
